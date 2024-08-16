@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="paper.css" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <h1 class="heading">Rock Paper Scissors</h1>
+    <div class="choices flex">
+      <div class="choice flex" id="paper">
+        <img src="paper.png" alt="paper" class="img" />
+      </div>
+      <div class="choice flex" id="rock">
+        <img src="rock.png" alt="Rock" class="img" />
+      </div>
+      <div class="choice flex" id="scissors">
+        <img src="scissors.png" alt="Scissors" class="img" />
+      </div>
+    </div>
+    <div class="score-board flex">
+      <div class="score">
+        <p id="user-score">0</p>
+        <p>You</p>
+      </div>
+      <div class="score">
+        <p id="comp-score">0</p>
+        <p>Comp</p>
+      </div>
+    </div>
+
+    <div class="msg-box">
+      <p id="msg" class="msg">Play your Move</p>
+    </div>
+
+    <a href="https://github.com/Samkit999yt/RockPaperScissors/" class="git">Made with 💖 by Samkit Jain</a>
+    <script src="rock.js"></script>
+  </body>
+</html>
