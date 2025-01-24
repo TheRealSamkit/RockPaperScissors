@@ -1,41 +1,116 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="paper.css" />
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-    <title>Rock Paper Scissors</title>
+    <meta
+      name="description"
+      content="Play Rock Paper Scissors online, a fun game against the computer. Choose between rock, paper, scissors, fire, or water."
+    />
+    <meta
+      name="keywords"
+      content="Rock Paper Scissors, online game, fun game, play with computer, game choice, fire, water, paper, rock, scissors"
+    />
+    <meta name="author" content="Samkit Jain" />
+    <link
+      rel="stylesheet"
+      href="paper.css"
+      title="Stylesheet for Rock Paper Scissors game"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="assets/favicon.png"
+      type="image/x-icon"
+      title="Website Favicon"
+    />
+    <title>Rock Paper Scissors Game - Play Online</title>
   </head>
-  <body>
-    <h1 class="heading">Rock Paper Scissors</h1>
-    <div class="choices flex">
-      <div class="choice flex" id="paper">
-        <img src="paper.png" alt="paper" class="img" />
+  <body class="flex" title="Main body of the Rock Paper Scissors game">
+    <h1 class="heading" title="Heading for the game">Rock Paper Scissors</h1>
+    <main title="Main content area of the game">
+      <div class="choices flex" title="Available choices in the game">
+        <div class="choice flex" id="paper" title="Choose Paper">
+          <img
+            src="assets/paper.png"
+            alt="Paper icon for Rock Paper Scissors game"
+            class="img"
+            title="Paper icon"
+          />
+        </div>
+        <div class="choice flex" id="rock" title="Choose Rock">
+          <img
+            src="assets/rock.png"
+            alt="Rock icon for Rock Paper Scissors game"
+            class="img"
+            title="Rock icon"
+          />
+        </div>
+        <div class="choice flex" id="scissors" title="Choose Scissors">
+          <img
+            src="assets/scissors.png"
+            alt="Scissors icon for Rock Paper Scissors game"
+            class="img"
+            title="Scissors icon"
+          />
+        </div>
+        <div class="choice flex" id="fire" title="Choose Fire">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 -960 960 960"
+            fill="#e8eaed"
+            class="fire flex"
+            title="Fire symbol for Rock Paper Scissors game"
+          >
+            <path
+              d="M240-400q0 52 21 98.5t60 81.5q-1-5-1-9v-9q0-32 12-60t35-51l113-111 113 111q23 23 35 51t12 60v9q0 4-1 9 39-35 60-81.5t21-98.5q0-50-18.5-94.5T648-574q-20 13-42 19.5t-45 6.5q-62 0-107.5-41T401-690q-39 33-69 68.5t-50.5 72Q261-513 250.5-475T240-400Zm240 52-57 56q-11 11-17 25t-6 29q0 32 23.5 55t56.5 23q33 0 56.5-23t23.5-55q0-16-6-29.5T537-292l-57-56Zm0-492v132q0 34 23.5 57t57.5 23q18 0 33.5-7.5T622-658l18-22q74 42 117 117t43 163q0 134-93 227T480-80q-134 0-227-93t-93-227q0-129 86.5-245T480-840Z"
+            />
+          </svg>
+        </div>
+        <div class="choice flex" id="water" title="Choose Water">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 -960 960 960"
+            fill="#e8eaed"
+            class="water"
+            title="Water symbol for Rock Paper Scissors game"
+          >
+            <path
+              d="M491-200q12-1 20.5-9.5T520-230q0-14-9-22.5t-23-7.5q-41 3-87-22.5T343-375q-2-11-10.5-18t-19.5-7q-14 0-23 10.5t-6 24.5q17 91 80 130t127 35ZM480-80q-137 0-228.5-94T160-408q0-100 79.5-217.5T480-880q161 137 240.5 254.5T800-408q0 140-91.5 234T480-80Zm0-80q104 0 172-70.5T720-408q0-73-60.5-165T480-774Q361-665 300.5-573T240-408q0 107 68 177.5T480-160Zm0-320Z"
+            />
+          </svg>
+        </div>
       </div>
-      <div class="choice flex" id="rock">
-        <img src="rock.png" alt="Rock" class="img" />
+      <div class="score-board flex" title="Player and computer score board">
+        <div class="score" title="Your score">
+          <p id="user-score">0</p>
+          <p>You</p>
+        </div>
+        <div class="score" title="Computer's score">
+          <p id="comp-score">0</p>
+          <p>Comp</p>
+        </div>
       </div>
-      <div class="choice flex" id="scissors">
-        <img src="scissors.png" alt="Scissors" class="img" />
-      </div>
-    </div>
-    <div class="score-board flex">
-      <div class="score">
-        <p id="user-score">0</p>
-        <p>You</p>
-      </div>
-      <div class="score">
-        <p id="comp-score">0</p>
-        <p>Comp</p>
-      </div>
-    </div>
 
-    <div class="msg-box">
-      <p id="msg" class="msg">Play your Move</p>
-    </div>
+      <div class="msg-box flex" title="Message box showing game status">
+        <p id="msg" class="msg">Play your Move</p>
+      </div>
+    </main>
 
-    <a href="https://github.com/Samkit999yt/RockPaperScissors/" class="git">Made with 💖 by Samkit Jain</a>
-    <script src="rock.js"></script>
+    <a
+      href="https://github.com/Samkit999yt/RockPaperScissors/"
+      class="git"
+      title="Link to GitHub repository for Rock Paper Scissors Game"
+      >Made by &copy; Samkit Jain</a
+    >
+    <script
+      src="rock.js"
+      title="JavaScript for handling Rock Paper Scissors game logic"
+    ></script>
   </body>
 </html>
